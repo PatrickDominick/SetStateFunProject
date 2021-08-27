@@ -1,8 +1,7 @@
-.align-me {
+.hide-me {
     @include row-format();
 
-    #text-to-align {
+    #text-to-hide {
         padding-bottom: 12px;
     }
-
 }

@@ -1,0 +1,9 @@
+@mixin row-format {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid blue;
+    width: 100vw;
+}
