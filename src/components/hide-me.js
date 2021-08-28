@@ -13,6 +13,7 @@ export default class HideMe extends Component {
 
     hide() {
         const textToHide = document.getElementById("text-to-hide");
+        let btnName = document.getElementsByClassName("hide-show-btn")
         if (textToHide.style.display === "none") {
             textToHide.style.display = "block";
         } else {
@@ -25,7 +26,7 @@ export default class HideMe extends Component {
             <div className="hide-me">
                 <h1 id = "text-to-hide">Hide Me!</h1>
                 <div className="hide-me-btn">
-                    <button onClick = {this.hide}>Hide</button>
+                    <button className = "hide-show-btn" onClick = {this.hide} >Hide</button>
                 </div>
             </div>
         )
