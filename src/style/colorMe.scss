@@ -1,14 +1,14 @@
-.hide-me {
+.colorator {
     @include row-format();
     border-right: 1px solid blue;
 
-    #text-to-hide {
-        padding-bottom: 12px;
+    .updown-btn {
+        width: 40px;
     }
-
     
+        
 }
 
-.hide-and-show-wrapper {
+.color-me-wrapper {
     @include two-columns();
 }

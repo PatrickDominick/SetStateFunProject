@@ -5,19 +5,20 @@ export default class HideMe extends Component {
         super();
 
         this.state = {
-
+            btnText: "Hide"
         }
+
         this.hide = this.hide.bind(this)
         
     }
 
+   
     hide() {
         const textToHide = document.getElementById("text-to-hide");
-        let btnName = document.getElementsByClassName("hide-show-btn")
         if (textToHide.style.display === "none") {
-            textToHide.style.display = "block";
+            textToHide.style.display = "block"; this.setState({ btnText: "Hide" })
         } else {
-            textToHide.style.display = "none";
+            textToHide.style.display = "none"; this.setState({ btnText: "Show" })
         }
     }
 
@@ -26,7 +27,7 @@ export default class HideMe extends Component {
             <div className="hide-me">
                 <h1 id = "text-to-hide">Hide Me!</h1>
                 <div className="hide-me-btn">
-                    <button className = "hide-show-btn" onClick = {this.hide} >Hide</button>
+                    <button className = "hide-show-btn" onClick = {this.hide} >{this.state.btnText}</button>
                 </div>
             </div>
         )

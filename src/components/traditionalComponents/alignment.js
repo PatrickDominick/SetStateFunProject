@@ -4,13 +4,13 @@ export default class Alignment extends Component {
     constructor(){
         super()
 
-        this.state{
+        this.state = {
             alignment: "left"
         }
     }
 
     handleClick(newAlignment) {
-        this.setState({ alignment: newAlignment})
+        this.setState({ alignment: newAlignment })
     }
 
     render() {

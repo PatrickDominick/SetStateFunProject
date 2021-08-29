@@ -1,0 +1,20 @@
+.adder {
+    @include row-format();
+    border-right: 1px solid blue;
+
+    .updown-btn {
+        width: 40px;
+    }
+
+    #number {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+    }
+    
+        
+}
+
+.incredecrementor-wrapper {
+    @include two-columns();
+}

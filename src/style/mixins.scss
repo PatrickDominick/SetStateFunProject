@@ -6,5 +6,10 @@
     padding-top: 12px;
     padding-bottom: 12px;
     border-bottom: 1px solid blue;
-    width: 98vw;
+    width: 50vw;
+}
+
+@mixin two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

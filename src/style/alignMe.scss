@@ -1,8 +1,15 @@
-.align-me {
-    @include row-format();
 
-    #text-to-align {
-        padding-bottom: 12px;
+
+.alignment {
+    @include two-columns();
+
+    .align-me {
+        @include row-format;
+        border-right: 1px solid blue;
+    
+        #text-to-align {
+            padding-bottom: 12px;
+        }
+    
     }
-
 }

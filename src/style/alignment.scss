@@ -1,13 +1,20 @@
-.alignment-wrapper {
-    .text.left {
-        text-align: left;
-    }
+    .alignment-wrapper {
+        border-bottom: 1px solid blue;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
 
-    .text.center {
-        text-align: center;
-    }
+        
+        .text.left {
+            text-align: left;
+        }
 
-    .text.right {
-        text-align: right;
+        .text.center {
+            text-align: center;
+        }
+
+        .text.right {
+            text-align: right;
+        }
     }
-}
