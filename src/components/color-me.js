@@ -1,34 +1,42 @@
 import React, { Component } from "react";
+import styled from "styled-components"
+
+const ColorChanger = styled.h1`
+    color: ${p => p.color ? p.color : "black"};
+`;
 
 export default class ColorMe extends Component {
-    constructor() {
-        super();
-
+    constructor(props) {
+        super(props);
         this.state = {
-            
-        }
-
-        this.handleSubmit = this.handleSubmit.bind(this)
-        
+            color: "black",
+            text: "Color Me!"
+        }  
+        this.colorRef = React.createRef();
+        this.textRef = React.createRef();
     }
 
-    handleSubmit() {
-
-    const userText = document.getElementsByName("text-for-colorator");
+    handleSubmit = () => {
+        const color = this.colorRef.current.value;
+        const text = this.textRef.current.value;
+        this.setState({
+            color, 
+            text
+        })
     }
 
    
     render() {
         return (
             <div className="colorator">
-                <h1 id = "text-to-color">`${this.userText}`</h1>
+                <ColorChanger color={this.state.color}>{this.state.text}</ColorChanger>
                 <div className="colorator-bar">
 
-                    <textarea name="color">prompt black</textarea>
+                    <textarea name="color" ref={this.colorRef} >{this.state.color}</textarea>
 
-                    <textarea name="text-for-colorator">Color Me!</textarea>
+                    <textarea name="text-for-colorator" ref={this.textRef}>{this.state.text}</textarea>
                 
-                    <button className = "increase-btn" type = "submit" >Submit</button>
+                    <button className = "increase-btn" type = "submit" onClick={this.handleSubmit}>Submit</button>
                     
                 </div>
                 

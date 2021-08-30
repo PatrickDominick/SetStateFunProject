@@ -3,13 +3,23 @@ import React, { Component } from "react";
 export default class ToggleClock extends Component {
     constructor() {
         super();
-
-        this.hide = this.hide.bind(this)
-        
+        this.state = {
+            time: new Date
+        }
     }
 
+    componentDidMount() {
+        setInterval(() => {
+            this.setState({
+                time: new Date
+            })
+                
+
+        }, 1000) 
+    };
+
    
-    hide() {
+    hide = () => {
         const textToHide = document.getElementById("clock");
         if (textToHide.style.display === "none") {
             textToHide.style.display = "block"; 
@@ -21,7 +31,7 @@ export default class ToggleClock extends Component {
     render() {
         return (
             <div className="toggle-clock">
-                <h1 id = "clock">string interpolation o'clock</h1>
+                <h1 id = "clock">{this.state.time.toLocaleTimeString()}</h1>
                 <div className="toggle-btn-wrapper">
                     <button className = "toggle-btn" onClick = {this.hide} >Toggle Clock</button>
                 </div>
