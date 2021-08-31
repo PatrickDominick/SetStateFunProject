@@ -1,13 +1,6 @@
 .pixelator {
     @include row-format();
     border-right: 1px solid blue;
-    
-
-    .updown-btn {
-        width: 40px;
-    }
-    
-        
 }
 
 .fontcrease-wrapper {

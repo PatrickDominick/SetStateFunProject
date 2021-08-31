@@ -29,8 +29,7 @@ export default class Fontcrease extends Component {
     decrease = () => {
         this.setState({ fontSize: this.state.fontSize - 1})
     }
-
-           
+       
     render() {
         const { fontSize } = this.state;
         return (
@@ -43,10 +42,8 @@ export default class Fontcrease extends Component {
                         onChange={this.handleTextAreaChange}
                     >
                         {`${fontSize}px`}
-                    </textarea>
-                
-                    <button className = "increase-btn" onClick = {this.increase}>Increase</button>
-                    
+                    </textarea>           
+                    <button className = "increase-btn" onClick = {this.increase}>Increase</button>                   
                     <button className = "decrease-btn" onClick = {this.decrease}>Decrease</button>
 
                 </div>
@@ -55,7 +52,3 @@ export default class Fontcrease extends Component {
         )
     }
 }
-   
-
-//put html on page
-//add onclick handlers

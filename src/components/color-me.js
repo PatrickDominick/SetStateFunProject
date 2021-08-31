@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 const ColorChanger = styled.h1`
     color: ${p => p.color ? p.color : "black"};
+    padding-bottom: 12px;
 `;
 
 export default class ColorMe extends Component {
@@ -24,27 +25,17 @@ export default class ColorMe extends Component {
             text
         })
     }
-
    
     render() {
         return (
             <div className="colorator">
                 <ColorChanger color={this.state.color}>{this.state.text}</ColorChanger>
                 <div className="colorator-bar">
-
                     <textarea name="color" ref={this.colorRef} >{this.state.color}</textarea>
-
-                    <textarea name="text-for-colorator" ref={this.textRef}>{this.state.text}</textarea>
-                
-                    <button className = "increase-btn" type = "submit" onClick={this.handleSubmit}>Submit</button>
-                    
-                </div>
-                
+                    <textarea name="text-for-colorator" ref={this.textRef}>{this.state.text}</textarea>                
+                    <button className = "increase-btn" type = "submit" onClick={this.handleSubmit}>Submit</button>                    
+                </div>               
             </div>
         )
     }
 }
-   
-
-//put html on page
-//add onclick handlers

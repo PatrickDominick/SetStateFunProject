@@ -5,11 +5,6 @@
 
     .align-me {
         @include row-format;
-        border-right: 1px solid blue;
-    
-        #text-to-align {
-            padding-bottom: 12px;
-        }
-    
+        border-right: 1px solid blue;                
     }
 }

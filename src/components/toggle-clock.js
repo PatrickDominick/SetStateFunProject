@@ -9,15 +9,12 @@ export default class ToggleClock extends Component {
     }
 
     componentDidMount() {
-        setInterval(() => {
+        this.id = setInterval(() => {
             this.setState({
                 time: new Date
             })
-                
-
         }, 1000) 
     };
-
    
     hide = () => {
         const textToHide = document.getElementById("clock");
@@ -26,6 +23,10 @@ export default class ToggleClock extends Component {
         } else {
             textToHide.style.display = "none"; 
         }
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.id)
     }
 
     render() {
@@ -39,7 +40,3 @@ export default class ToggleClock extends Component {
         )
     }
 }
-   
-
-//put html on page
-//add onclick handlers

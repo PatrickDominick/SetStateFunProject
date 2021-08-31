@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const TextToAlign = styled.h1`
     text-align: ${p => p.align ? p.align : "left"};
+    padding-bottom: 12px;
 `;
 
 export default class AlignMe extends Component {
